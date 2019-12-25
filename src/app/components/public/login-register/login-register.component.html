@@ -1,0 +1,10 @@
+<!-- <button (click)="toggle()">toggle</button>
+<div [@openClose]="isOpen ? 'open' : 'closed'" class="open-close-container">
+  <p>The box is now {{ isOpen ? 'Open' : 'Closed' }}!</p>
+</div> -->
+<div>
+  <button (click)="increaseImage($event)">+</button>
+  <button (click)="decreaseImage($event)">-</button>
+  <button (click)="rotateImage($event)">rotate</button>
+</div>
+<canvas id="canvas" width="500" height="500"></canvas>

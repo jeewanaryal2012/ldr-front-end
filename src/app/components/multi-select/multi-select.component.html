@@ -1,0 +1,26 @@
+<div class="multi-select-wrapper">
+  <div class="clickable m-4" (click)="clickableClicked($event)">
+    <span class="carret">
+      <!-- <i class="fas fa-sort-down"></i> -->
+      <i [ngClass]="showAllList === true ? 'fas fa-sort-down' : 'fas fa-sort-up'"></i>
+    </span>
+  </div>
+
+  <div class="clickedList m4" (click)="clicedListClicked($event)" *ngIf="showClickedList === true;">
+    <div>
+      <span class="selected-item" *ngFor="let selectedItem of selectedItems">{{selectedItem}}</span>
+    </div>
+  </div>
+
+  <div class="allList m-4" (click)="allListClicked($event)" *ngIf="showAllList === true;">
+    <div>
+      <ul>
+        <li *ngFor="let l of dataList">
+          <input #saveUserNameCheckBox id="saveUserNameCheckBox" type="checkbox"
+            [checked]="selectedItems.indexOf(l) > -1"
+            (change)="itemClicked($event, l, saveUserNameCheckBox.checked)" />{{l}}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

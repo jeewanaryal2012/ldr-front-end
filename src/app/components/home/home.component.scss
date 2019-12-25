@@ -1,1 +1,31 @@
 
+.sms-code {
+    .code-input {
+        width: 30px;
+        height: 30px;
+    }
+
+    .overlay {
+        position: fixed;
+    border: 1px solid red;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    }
+}
+
+::ng-deep {
+    .mat-form-field-infix {
+        width: 40px !important;
+        border: 2px solid #949494;
+        margin: 4px;
+    }
+    .mat-form-field-appearance-legacy .mat-form-field-underline:focus {
+        background-color: transparent;
+    }
+    .mat-input-underline {
+        display: none;
+    }
+}

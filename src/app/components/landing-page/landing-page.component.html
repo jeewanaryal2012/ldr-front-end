@@ -1,0 +1,29 @@
+<!-- <div class="main-wrapper">
+  <div>
+    <span class="tile-white" *ngFor="let tile of [1,2,3,4,5,6,7,8]">
+      <span class="tile-black"></span>
+    </span>
+  </div>
+</div> -->
+
+<!-- 
+<ul class="set">
+  <li class="white b" (click)="keyPressed($event, '1')"></li>
+  <li class="black as" (click)="keyPressed($event, '2')"></li>
+  <li class="white a" (click)="keyPressed($event, '3')"></li>
+  <li class="black gs" (click)="keyPressed($event, '4')"></li>
+  <li class="white g" (click)="keyPressed($event, '5')"></li>
+  <li class="black fs" (click)="keyPressed($event, '6')"></li>
+  <li class="white f" (click)="keyPressed($event, '7')"></li>
+  <li class="white e" (click)="keyPressed($event, '8')"></li>
+  <li class="black ds" (click)="keyPressed($event, '9')"></li>
+  <li class="white d" (click)="keyPressed($event, '10')"></li>
+  <li class="black cs" (click)="keyPressed($event, '11')"></li>
+  <li class="white c" (click)="keyPressed($event, '12')"></li>
+</ul> -->
+
+<div *ngFor="let x of dataList, let i = index">
+  <app-multi-select [dataList]="dataList[i]"></app-multi-select>
+</div>
+
+<!-- <app-multi-select [dataList]="dataList"></app-multi-select> -->
